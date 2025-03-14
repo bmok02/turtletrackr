@@ -7,11 +7,9 @@ import router from "@/router/router";
 
 export const useAuthStore = defineStore("authStore", () => {
     const user = ref(null);
-    const isAuthReady = ref(false);
 
     onAuthStateChanged(auth, (firebaseUser) => {
         user.value = firebaseUser;
-        isAuthReady.value = true;
     });
 
     // Register a user with email and password, update displayName in both Auth and Firestore.

@@ -40,7 +40,7 @@ export default {
     display: flex;
     flex-direction: column; /* Ensure add button is below main content */
     width: 100vw;
-    padding: 4rem 2rem;
+    padding: var(--padding-body);
     gap: 3rem;
 }
 
